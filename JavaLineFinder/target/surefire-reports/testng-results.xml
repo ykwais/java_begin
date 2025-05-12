@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-11-23T02:35:18 MSK" name="Surefire suite" finished-at="2024-11-23T02:35:18 MSK" duration-ms="197">
+    <groups>
+    </groups>
+    <test started-at="2024-11-23T02:35:18 MSK" name="Surefire test" finished-at="2024-11-23T02:35:18 MSK" duration-ms="197">
+      <class name="ru.mai.lessons.rpks.impl.LineFinderTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ru.mai.lessons.rpks.impl.LineFinderTest@1fa268de]" started-at="2024-11-23T02:35:18 MSK" name="setUp" finished-at="2024-11-23T02:35:18 MSK" duration-ms="14" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testNegativeLineCountValue()[pri:0, instance:ru.mai.lessons.rpks.impl.LineFinderTest@1fa268de]" started-at="2024-11-23T02:35:18 MSK" name="testNegativeLineCountValue" description="Проверяем валидацию значения lineCount" finished-at="2024-11-23T02:35:18 MSK" duration-ms="3" status="PASS">
+          <exception class="ru.mai.lessons.rpks.exception.LineCountShouldBePositiveException">
+            <message>
+              <![CDATA[Line count should be positive!]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[ru.mai.lessons.rpks.exception.LineCountShouldBePositiveException: Line count should be positive!
+at ru.mai.lessons.rpks.impl.LineFinder.find(LineFinder.java:23)
+at ru.mai.lessons.rpks.impl.LineFinderTest.testNegativeLineCountValue(LineFinderTest.java:154)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- ru.mai.lessons.rpks.exception.LineCountShouldBePositiveException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNegativeLineCountValue -->
+        <test-method signature="testPositiveFind()[pri:0, instance:ru.mai.lessons.rpks.impl.LineFinderTest@1fa268de]" started-at="2024-11-23T02:35:18 MSK" name="testPositiveFind" description="Проверяем успешный поиск строки в файле по заданному ключевому слову" finished-at="2024-11-23T02:35:18 MSK" duration-ms="33" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPositiveFind -->
+        <test-method signature="testPositiveFindMiddleMultipleLines()[pri:0, instance:ru.mai.lessons.rpks.impl.LineFinderTest@1fa268de]" started-at="2024-11-23T02:35:18 MSK" name="testPositiveFindMiddleMultipleLines" description="Проверяем успешный вывод указанного количества строк до и после нескольких найденных строк. Проверяем поиск в середине текста." finished-at="2024-11-23T02:35:18 MSK" duration-ms="15" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPositiveFindMiddleMultipleLines -->
+        <test-method signature="testPositiveFindMultipleLinesAtTheEnd()[pri:0, instance:ru.mai.lessons.rpks.impl.LineFinderTest@1fa268de]" started-at="2024-11-23T02:35:18 MSK" name="testPositiveFindMultipleLinesAtTheEnd" description="Проверяем успешный вывод указанного количества строк до и после найденной строки. Проверяем поиск в конце текста." finished-at="2024-11-23T02:35:18 MSK" duration-ms="12" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPositiveFindMultipleLinesAtTheEnd -->
+        <test-method signature="testPositiveFindStartMultipleLines(int,java.lang.String)[pri:0, instance:ru.mai.lessons.rpks.impl.LineFinderTest@1fa268de]" started-at="2024-11-23T02:35:18 MSK" name="testPositiveFindStartMultipleLines" description="Проверяем успешный вывод указанного количества строк до и после найденной строки. Проверяем поиск в начале текста." data-provider="linesNumberFromStart" finished-at="2024-11-23T02:35:18 MSK" duration-ms="12" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[expectedBoastOutputFile1.txt]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPositiveFindStartMultipleLines -->
+        <test-method signature="testPositiveFindStartMultipleLines(int,java.lang.String)[pri:0, instance:ru.mai.lessons.rpks.impl.LineFinderTest@1fa268de]" started-at="2024-11-23T02:35:18 MSK" name="testPositiveFindStartMultipleLines" description="Проверяем успешный вывод указанного количества строк до и после найденной строки. Проверяем поиск в начале текста." data-provider="linesNumberFromStart" finished-at="2024-11-23T02:35:18 MSK" duration-ms="10" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[expectedBoastOutputFile2.txt]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPositiveFindStartMultipleLines -->
+        <test-method signature="testPositiveFindStartMultipleLines(int,java.lang.String)[pri:0, instance:ru.mai.lessons.rpks.impl.LineFinderTest@1fa268de]" started-at="2024-11-23T02:35:18 MSK" name="testPositiveFindStartMultipleLines" description="Проверяем успешный вывод указанного количества строк до и после найденной строки. Проверяем поиск в начале текста." data-provider="linesNumberFromStart" finished-at="2024-11-23T02:35:18 MSK" duration-ms="19" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[expectedBoastOutputFile3.txt]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPositiveFindStartMultipleLines -->
+        <test-method signature="testPositiveWordNotFound(java.lang.String)[pri:0, instance:ru.mai.lessons.rpks.impl.LineFinderTest@1fa268de]" started-at="2024-11-23T02:35:18 MSK" name="testPositiveWordNotFound" description="Проверяем корректную обработку текста, когда не найдено ни одной строки. Ожидаем, что созданный файл пустой." data-provider="linesNotFoundCases" finished-at="2024-11-23T02:35:18 MSK" duration-ms="11" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[кошка]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPositiveWordNotFound -->
+        <test-method signature="testPositiveWordNotFound(java.lang.String)[pri:0, instance:ru.mai.lessons.rpks.impl.LineFinderTest@1fa268de]" started-at="2024-11-23T02:35:18 MSK" name="testPositiveWordNotFound" description="Проверяем корректную обработку текста, когда не найдено ни одной строки. Ожидаем, что созданный файл пустой." data-provider="linesNotFoundCases" finished-at="2024-11-23T02:35:18 MSK" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPositiveWordNotFound -->
+      </class> <!-- ru.mai.lessons.rpks.impl.LineFinderTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
