@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">Surefire suite</th></tr>
+<tr><td><a href="#t0">Surefire test</a></td><td class="num">25</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">170</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Surefire suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Surefire test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="25">ru.mai.lessons.rpks.impl.DatabaseDriverTest</td><td><a href="#m0">testNegativeTryFindUnknownFieldInTable</a></td><td rowspan="13">1732740971517</td><td rowspan="13">2</td></tr><tr class="passedeven"><td><a href="#m1">testNegativeTryFindUnknownFieldInTable</a></td></tr><tr class="passedeven"><td><a href="#m2">testNegativeTryFindUnknownFieldInTable</a></td></tr><tr class="passedeven"><td><a href="#m3">testNegativeTryFindUnknownFieldInTable</a></td></tr><tr class="passedeven"><td><a href="#m4">testNegativeTryFindUnknownFieldInTable</a></td></tr><tr class="passedeven"><td><a href="#m5">testNegativeTryFindUnknownFieldInTable</a></td></tr><tr class="passedeven"><td><a href="#m6">testNegativeTryFindUnknownFieldInTable</a></td></tr><tr class="passedeven"><td><a href="#m7">testNegativeTryFindUnknownFieldInTable</a></td></tr><tr class="passedeven"><td><a href="#m8">testNegativeTryFindUnknownFieldInTable</a></td></tr><tr class="passedeven"><td><a href="#m9">testNegativeTryFindUnknownFieldInTable</a></td></tr><tr class="passedeven"><td><a href="#m10">testNegativeTryFindUnknownFieldInTable</a></td></tr><tr class="passedeven"><td><a href="#m11">testNegativeTryFindUnknownFieldInTable</a></td></tr><tr class="passedeven"><td><a href="#m12">testNegativeTryFindUnknownFieldInTable</a></td></tr><tr class="passedeven"><td><a href="#m13">testPositiveFindDataBySelectFromWhere</a></td><td rowspan="5">1732740971541</td><td rowspan="5">14</td></tr><tr class="passedeven"><td><a href="#m14">testPositiveFindDataBySelectFromWhere</a></td></tr><tr class="passedeven"><td><a href="#m15">testPositiveFindDataBySelectFromWhere</a></td></tr><tr class="passedeven"><td><a href="#m16">testPositiveFindDataBySelectFromWhere</a></td></tr><tr class="passedeven"><td><a href="#m17">testPositiveFindDataBySelectFromWhere</a></td></tr><tr class="passedeven"><td><a href="#m18">testPositiveFindDataBySelectFromWhereGroupBy</a></td><td rowspan="2">1732740971580</td><td rowspan="2">3</td></tr><tr class="passedeven"><td><a href="#m19">testPositiveFindDataBySelectFromWhereGroupBy</a></td></tr><tr class="passedeven"><td><a href="#m20">testPositiveFindDataBySimpleSelectFrom</a></td><td rowspan="5">1732740971600</td><td rowspan="5">1</td></tr><tr class="passedeven"><td><a href="#m21">testPositiveFindDataBySimpleSelectFrom</a></td></tr><tr class="passedeven"><td><a href="#m22">testPositiveFindDataBySimpleSelectFrom</a></td></tr><tr class="passedeven"><td><a href="#m23">testPositiveFindDataBySimpleSelectFrom</a></td></tr><tr class="passedeven"><td><a href="#m24">testPositiveFindDataBySimpleSelectFrom</a></td></tr></tbody>
+</table>
+<h2>Surefire test</h2><h3 id="m0">ru.mai.lessons.rpks.impl.DatabaseDriverTest#testNegativeTryFindUnknownFieldInTable</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>FROM=students.csv</td></tr><tr><th>Expected Exception</th></tr><tr><td><div class="stacktrace">ru.mai.lessons.rpks.exception.WrongCommandFormatException: Your query has no SELECT
+	at ru.mai.lessons.rpks.impl.ParseQuery.getColumnsToSELECT(ParseQuery.java:35)
+	at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:41)
+	at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">ru.mai.lessons.rpks.impl.DatabaseDriverTest#testNegativeTryFindUnknownFieldInTable</h3><table class="result"><tr><th>Expected Exception</th></tr><tr><td><div class="stacktrace">ru.mai.lessons.rpks.exception.FieldNotFoundInTableException: wrong field!
+	at ru.mai.lessons.rpks.impl.QueryHandler.selectColumns(QueryHandler.java:58)
+	at ru.mai.lessons.rpks.impl.QueryHandler.handleQuery(QueryHandler.java:40)
+	at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:57)
+	at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:152)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">ru.mai.lessons.rpks.impl.DatabaseDriverTest#testNegativeTryFindUnknownFieldInTable</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>SELECT=full_name,subject_name FROM=students.csv,subjects.csv grade.csv WHERE=(grade=&apos;5&apos;)</td></tr><tr><th>Expected Exception</th></tr><tr><td><div class="stacktrace">ru.mai.lessons.rpks.exception.WrongCommandFormatException: subjects.csv grade.csv
+	at ru.mai.lessons.rpks.impl.QueryHandler.joinTables(QueryHandler.java:166)
+	at ru.mai.lessons.rpks.impl.QueryHandler.handleQuery(QueryHandler.java:30)
+	at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:57)
+	at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">ru.mai.lessons.rpks.impl.DatabaseDriverTest#testNegativeTryFindUnknownFieldInTable</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>SELECT=group_name</td></tr><tr><th>Expected Exception</th></tr><tr><td><div class="stacktrace">ru.mai.lessons.rpks.exception.WrongCommandFormatException: Your query has no FROM
+	at ru.mai.lessons.rpks.impl.ParseQuery.getTablesForFROM(ParseQuery.java:42)
+	at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:40)
+	at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">ru.mai.lessons.rpks.impl.DatabaseDriverTest#testNegativeTryFindUnknownFieldInTable</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>SELECT=full_name,subject_name FROM=students.csv,subjects.csv,grade.csv WHERE=grade=&apos;5&apos;</td></tr><tr><th>Expected Exception</th></tr><tr><td><div class="stacktrace">ru.mai.lessons.rpks.exception.WrongCommandFormatException: grade.csv WHERE=grade=&apos;5&apos;
+	at ru.mai.lessons.rpks.impl.QueryHandler.joinTables(QueryHandler.java:166)
+	at ru.mai.lessons.rpks.impl.QueryHandler.handleQuery(QueryHandler.java:30)
+	at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:57)
+	at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">ru.mai.lessons.rpks.impl.DatabaseDriverTest#testNegativeTryFindUnknownFieldInTable</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>SELECT=group_name FROM=groups.csv GROUPBY group_name</td></tr><tr><th>Expected Exception</th></tr><tr><td><div class="stacktrace">ru.mai.lessons.rpks.exception.WrongCommandFormatException: Invalid query: missing &apos;=&apos; in GROUPBY group_name
+	at ru.mai.lessons.rpks.impl.ParseQuery.&lt;init&gt;(ParseQuery.java:20)
+	at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:27)
+	at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">ru.mai.lessons.rpks.impl.DatabaseDriverTest#testNegativeTryFindUnknownFieldInTable</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>SELECT=group_name FROM=groups.csv GROUPBY=</td></tr><tr><th>Expected Exception</th></tr><tr><td><div class="stacktrace">ru.mai.lessons.rpks.exception.WrongCommandFormatException: Invalid query: GROUPBY=
+	at ru.mai.lessons.rpks.impl.ParseQuery.&lt;init&gt;(ParseQuery.java:24)
+	at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:27)
+	at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">ru.mai.lessons.rpks.impl.DatabaseDriverTest#testNegativeTryFindUnknownFieldInTable</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>SELECT=group_name FROM= GROUPBY=group_name</td></tr><tr><th>Expected Exception</th></tr><tr><td><div class="stacktrace">ru.mai.lessons.rpks.exception.WrongCommandFormatException: Invalid query: FROM= 
+	at ru.mai.lessons.rpks.impl.ParseQuery.&lt;init&gt;(ParseQuery.java:24)
+	at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:27)
+	at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">ru.mai.lessons.rpks.impl.DatabaseDriverTest#testNegativeTryFindUnknownFieldInTable</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>SELECT group_name FROM=students.csv</td></tr><tr><th>Expected Exception</th></tr><tr><td><div class="stacktrace">ru.mai.lessons.rpks.exception.WrongCommandFormatException: Invalid query: missing &apos;=&apos; in SELECT group_name 
+	at ru.mai.lessons.rpks.impl.ParseQuery.&lt;init&gt;(ParseQuery.java:20)
+	at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:27)
+	at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">ru.mai.lessons.rpks.impl.DatabaseDriverTest#testNegativeTryFindUnknownFieldInTable</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>SELECT=full_name,subject_name FROM=students.csv,subjects.csv,grade.csv WHERE=(grade==&apos;5&apos;)</td></tr><tr><th>Expected Exception</th></tr><tr><td><div class="stacktrace">ru.mai.lessons.rpks.exception.WrongCommandFormatException: Invalid query: missing &apos;=&apos; in WHERE=(grade==&apos;5&apos;)
+	at ru.mai.lessons.rpks.impl.ParseQuery.&lt;init&gt;(ParseQuery.java:20)
+	at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:27)
+	at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">ru.mai.lessons.rpks.impl.DatabaseDriverTest#testNegativeTryFindUnknownFieldInTable</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>SELECT= FROM=groups.csv GROUPBY=group_name</td></tr><tr><th>Expected Exception</th></tr><tr><td><div class="stacktrace">ru.mai.lessons.rpks.exception.WrongCommandFormatException: Invalid query: SELECT= 
+	at ru.mai.lessons.rpks.impl.ParseQuery.&lt;init&gt;(ParseQuery.java:24)
+	at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:27)
+	at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">ru.mai.lessons.rpks.impl.DatabaseDriverTest#testNegativeTryFindUnknownFieldInTable</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>SELECT=group_name FROM students.csv</td></tr><tr><th>Expected Exception</th></tr><tr><td><div class="stacktrace">ru.mai.lessons.rpks.exception.WrongCommandFormatException: Invalid query: missing &apos;=&apos; in FROM students.csv
+	at ru.mai.lessons.rpks.impl.ParseQuery.&lt;init&gt;(ParseQuery.java:20)
+	at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:27)
+	at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m12">ru.mai.lessons.rpks.impl.DatabaseDriverTest#testNegativeTryFindUnknownFieldInTable</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>SELECT=full_name,subject_name FROM=students.csv,subjects.csv,grade.csv WHERE (grade=&apos;5&apos;)</td></tr><tr><th>Expected Exception</th></tr><tr><td><div class="stacktrace">ru.mai.lessons.rpks.exception.WrongCommandFormatException: grade.csv WHERE (grade=&apos;5&apos;)
+	at ru.mai.lessons.rpks.impl.QueryHandler.joinTables(QueryHandler.java:166)
+	at ru.mai.lessons.rpks.impl.QueryHandler.handleQuery(QueryHandler.java:30)
+	at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:57)
+	at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m13">ru.mai.lessons.rpks.impl.DatabaseDriverTest#testPositiveFindDataBySelectFromWhere</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>SELECT=group_name,grade,date FROM=students.csv,groups.csv,subjects.csv,grade.csv WHERE=(full_name=&apos;Иванов Иван&apos; AND subject_name=&apos;Английский&apos;)</td><td>[5ИНТ-001;5;17.01.2023]</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m14">ru.mai.lessons.rpks.impl.DatabaseDriverTest#testPositiveFindDataBySelectFromWhere</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>SELECT=full_name,subject_name FROM=students.csv,subjects.csv,grade.csv WHERE=(grade=&apos;1&apos;)</td><td>[]</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m15">ru.mai.lessons.rpks.impl.DatabaseDriverTest#testPositiveFindDataBySelectFromWhere</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>SELECT=full_name,subject_name FROM=students.csv,subjects.csv,grade.csv WHERE=(grade=&apos;3&apos; OR grade=&apos;4&apos; OR grade=&apos;2&apos;)</td><td>[Иванов Иван;Матан, Петров Олег;РПКС, Петров Олег;Матан, Петров Олег;История, Игнатова Ольга;РПКС, Калинина Дарья;РПКС, Калинина Дарья;Матан, Калинина Дарья;История, Калинина Дарья;Английский, Кузнецов Михаил;Матан, Кузнецов Михаил;История, Кузнецов Михаил;Английский, Орлов Виктор;РПКС, Орлов Виктор;Матан, Орлов Виктор;История, Орлов Виктор;Английский, Никитина Ирина;РПКС, Никитина Ирина;Матан, Никитина Ирина;Английский]</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m16">ru.mai.lessons.rpks.impl.DatabaseDriverTest#testPositiveFindDataBySelectFromWhere</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>SELECT=full_name,group_name,grade,date FROM=students.csv,groups.csv,subjects.csv,grade.csv WHERE=(subject_name=&apos;РПКС&apos;)</td><td>[Иванов Иван;5ИНТ-001;5;05.01.2023, Петров Олег;5ИНТ-001;4;05.01.2023, Игнатова Ольга;5ИНТ-002;4;06.01.2023, Сидоров Николай;5ПМИ-001;5;07.01.2023, Калинина Дарья;5ПМИ-001;3;07.01.2023, Кузнецов Михаил;5ИНТ-001;5;05.01.2023, Орлов Виктор;5ПМИ-001;4;07.01.2023, Никитина Ирина;5ИНТ-002;3;06.01.2023]</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m17">ru.mai.lessons.rpks.impl.DatabaseDriverTest#testPositiveFindDataBySelectFromWhere</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>SELECT=group_name,full_name,subject_name FROM=students.csv,groups.csv,subjects.csv,grade.csv WHERE=(grade=&apos;2&apos;)</td><td>[5ИНТ-002;Никитина Ирина;Английский]</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m18">ru.mai.lessons.rpks.impl.DatabaseDriverTest#testPositiveFindDataBySelectFromWhereGroupBy</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>SELECT=group_name FROM=groups.csv GROUPBY=group_name</td><td>[5ИНТ-001, 5ИНТ-002, 5ПМИ-001]</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m19">ru.mai.lessons.rpks.impl.DatabaseDriverTest#testPositiveFindDataBySelectFromWhereGroupBy</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>SELECT=subject_name FROM=subjects.csv,grade.csv WHERE=(grade=&apos;5&apos;) GROUPBY=subject_name</td><td>[РПКС, История, Английский, Матан]</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m20">ru.mai.lessons.rpks.impl.DatabaseDriverTest#testPositiveFindDataBySimpleSelectFrom</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>SELECT=group_name,student_id FROM=groups.csv</td><td>[5ИНТ-001;5, 5ИНТ-002;2, 5ПМИ-001;4, 5ИНТ-001;0, 5ИНТ-001;1, 5ИНТ-002;7, 5ПМИ-001;3, 5ПМИ-001;6]</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m21">ru.mai.lessons.rpks.impl.DatabaseDriverTest#testPositiveFindDataBySimpleSelectFrom</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>SELECT=full_name FROM=students.csv</td><td>[Иванов Иван, Петров Олег, Игнатова Ольга, Сидоров Николай, Калинина Дарья, Кузнецов Михаил, Орлов Виктор, Никитина Ирина]</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m22">ru.mai.lessons.rpks.impl.DatabaseDriverTest#testPositiveFindDataBySimpleSelectFrom</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>SELECT=subject_name FROM=subjects.csv</td><td>[РПКС, Матан, История, Английский]</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m23">ru.mai.lessons.rpks.impl.DatabaseDriverTest#testPositiveFindDataBySimpleSelectFrom</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>SELECT=full_name,id FROM=students.csv</td><td>[Иванов Иван;0, Петров Олег;1, Игнатова Ольга;2, Сидоров Николай;3, Калинина Дарья;4, Кузнецов Михаил;5, Орлов Виктор;6, Никитина Ирина;7]</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m24">ru.mai.lessons.rpks.impl.DatabaseDriverTest#testPositiveFindDataBySimpleSelectFrom</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>SELECT=id,full_name FROM=students.csv</td><td>[0;Иванов Иван, 1;Петров Олег, 2;Игнатова Ольга, 3;Сидоров Николай, 4;Калинина Дарья, 5;Кузнецов Михаил, 6;Орлов Виктор, 7;Никитина Ирина]</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

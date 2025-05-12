@@ -1,0 +1,908 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="25" passed="25" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-11-27T23:56:11 MSK" name="Surefire suite" finished-at="2024-11-27T23:56:11 MSK" duration-ms="170">
+    <groups>
+    </groups>
+    <test started-at="2024-11-27T23:56:11 MSK" name="Surefire test" finished-at="2024-11-27T23:56:11 MSK" duration-ms="170">
+      <class name="ru.mai.lessons.rpks.impl.DatabaseDriverTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f]" started-at="2024-11-27T23:56:11 MSK" name="setUp" finished-at="2024-11-27T23:56:11 MSK" duration-ms="15" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testNegativeTryFindUnknownFieldInTable()[pri:0, instance:ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f]" started-at="2024-11-27T23:56:11 MSK" name="testNegativeTryFindUnknownFieldInTable" description="Проверяем реакцию на попытку получить данные из поля, которого нет в таблице" finished-at="2024-11-27T23:56:11 MSK" duration-ms="11" status="PASS">
+          <exception class="ru.mai.lessons.rpks.exception.FieldNotFoundInTableException">
+            <message>
+              <![CDATA[wrong field!]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[ru.mai.lessons.rpks.exception.FieldNotFoundInTableException: wrong field!
+at ru.mai.lessons.rpks.impl.QueryHandler.selectColumns(QueryHandler.java:58)
+at ru.mai.lessons.rpks.impl.QueryHandler.handleQuery(QueryHandler.java:40)
+at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:57)
+at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:152)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- ru.mai.lessons.rpks.exception.FieldNotFoundInTableException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNegativeTryFindUnknownFieldInTable -->
+        <test-method signature="testNegativeTryFindUnknownFieldInTable(java.lang.String)[pri:0, instance:ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f]" started-at="2024-11-27T23:56:11 MSK" name="testNegativeTryFindUnknownFieldInTable" description="Проверяем валидацию формата команды" data-provider="wrongFormatCommandCases" finished-at="2024-11-27T23:56:11 MSK" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[SELECT group_name FROM=students.csv]]>
+              </value>
+            </param>
+          </params>
+          <exception class="ru.mai.lessons.rpks.exception.WrongCommandFormatException">
+            <message>
+              <![CDATA[Invalid query: missing '=' in SELECT group_name ]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[ru.mai.lessons.rpks.exception.WrongCommandFormatException: Invalid query: missing '=' in SELECT group_name 
+at ru.mai.lessons.rpks.impl.ParseQuery.<init>(ParseQuery.java:20)
+at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:27)
+at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- ru.mai.lessons.rpks.exception.WrongCommandFormatException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNegativeTryFindUnknownFieldInTable -->
+        <test-method signature="testNegativeTryFindUnknownFieldInTable(java.lang.String)[pri:0, instance:ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f]" started-at="2024-11-27T23:56:11 MSK" name="testNegativeTryFindUnknownFieldInTable" description="Проверяем валидацию формата команды" data-provider="wrongFormatCommandCases" finished-at="2024-11-27T23:56:11 MSK" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[SELECT=group_name FROM students.csv]]>
+              </value>
+            </param>
+          </params>
+          <exception class="ru.mai.lessons.rpks.exception.WrongCommandFormatException">
+            <message>
+              <![CDATA[Invalid query: missing '=' in FROM students.csv]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[ru.mai.lessons.rpks.exception.WrongCommandFormatException: Invalid query: missing '=' in FROM students.csv
+at ru.mai.lessons.rpks.impl.ParseQuery.<init>(ParseQuery.java:20)
+at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:27)
+at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- ru.mai.lessons.rpks.exception.WrongCommandFormatException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNegativeTryFindUnknownFieldInTable -->
+        <test-method signature="testNegativeTryFindUnknownFieldInTable(java.lang.String)[pri:0, instance:ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f]" started-at="2024-11-27T23:56:11 MSK" name="testNegativeTryFindUnknownFieldInTable" description="Проверяем валидацию формата команды" data-provider="wrongFormatCommandCases" finished-at="2024-11-27T23:56:11 MSK" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[SELECT=group_name]]>
+              </value>
+            </param>
+          </params>
+          <exception class="ru.mai.lessons.rpks.exception.WrongCommandFormatException">
+            <message>
+              <![CDATA[Your query has no FROM]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[ru.mai.lessons.rpks.exception.WrongCommandFormatException: Your query has no FROM
+at ru.mai.lessons.rpks.impl.ParseQuery.getTablesForFROM(ParseQuery.java:42)
+at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:40)
+at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- ru.mai.lessons.rpks.exception.WrongCommandFormatException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNegativeTryFindUnknownFieldInTable -->
+        <test-method signature="testNegativeTryFindUnknownFieldInTable(java.lang.String)[pri:0, instance:ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f]" started-at="2024-11-27T23:56:11 MSK" name="testNegativeTryFindUnknownFieldInTable" description="Проверяем валидацию формата команды" data-provider="wrongFormatCommandCases" finished-at="2024-11-27T23:56:11 MSK" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[FROM=students.csv]]>
+              </value>
+            </param>
+          </params>
+          <exception class="ru.mai.lessons.rpks.exception.WrongCommandFormatException">
+            <message>
+              <![CDATA[Your query has no SELECT]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[ru.mai.lessons.rpks.exception.WrongCommandFormatException: Your query has no SELECT
+at ru.mai.lessons.rpks.impl.ParseQuery.getColumnsToSELECT(ParseQuery.java:35)
+at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:41)
+at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- ru.mai.lessons.rpks.exception.WrongCommandFormatException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNegativeTryFindUnknownFieldInTable -->
+        <test-method signature="testNegativeTryFindUnknownFieldInTable(java.lang.String)[pri:0, instance:ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f]" started-at="2024-11-27T23:56:11 MSK" name="testNegativeTryFindUnknownFieldInTable" description="Проверяем валидацию формата команды" data-provider="wrongFormatCommandCases" finished-at="2024-11-27T23:56:11 MSK" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[SELECT= FROM=groups.csv GROUPBY=group_name]]>
+              </value>
+            </param>
+          </params>
+          <exception class="ru.mai.lessons.rpks.exception.WrongCommandFormatException">
+            <message>
+              <![CDATA[Invalid query: SELECT= ]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[ru.mai.lessons.rpks.exception.WrongCommandFormatException: Invalid query: SELECT= 
+at ru.mai.lessons.rpks.impl.ParseQuery.<init>(ParseQuery.java:24)
+at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:27)
+at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- ru.mai.lessons.rpks.exception.WrongCommandFormatException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNegativeTryFindUnknownFieldInTable -->
+        <test-method signature="testNegativeTryFindUnknownFieldInTable(java.lang.String)[pri:0, instance:ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f]" started-at="2024-11-27T23:56:11 MSK" name="testNegativeTryFindUnknownFieldInTable" description="Проверяем валидацию формата команды" data-provider="wrongFormatCommandCases" finished-at="2024-11-27T23:56:11 MSK" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[SELECT=group_name FROM= GROUPBY=group_name]]>
+              </value>
+            </param>
+          </params>
+          <exception class="ru.mai.lessons.rpks.exception.WrongCommandFormatException">
+            <message>
+              <![CDATA[Invalid query: FROM= ]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[ru.mai.lessons.rpks.exception.WrongCommandFormatException: Invalid query: FROM= 
+at ru.mai.lessons.rpks.impl.ParseQuery.<init>(ParseQuery.java:24)
+at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:27)
+at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- ru.mai.lessons.rpks.exception.WrongCommandFormatException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNegativeTryFindUnknownFieldInTable -->
+        <test-method signature="testNegativeTryFindUnknownFieldInTable(java.lang.String)[pri:0, instance:ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f]" started-at="2024-11-27T23:56:11 MSK" name="testNegativeTryFindUnknownFieldInTable" description="Проверяем валидацию формата команды" data-provider="wrongFormatCommandCases" finished-at="2024-11-27T23:56:11 MSK" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[SELECT=group_name FROM=groups.csv GROUPBY=]]>
+              </value>
+            </param>
+          </params>
+          <exception class="ru.mai.lessons.rpks.exception.WrongCommandFormatException">
+            <message>
+              <![CDATA[Invalid query: GROUPBY=]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[ru.mai.lessons.rpks.exception.WrongCommandFormatException: Invalid query: GROUPBY=
+at ru.mai.lessons.rpks.impl.ParseQuery.<init>(ParseQuery.java:24)
+at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:27)
+at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- ru.mai.lessons.rpks.exception.WrongCommandFormatException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNegativeTryFindUnknownFieldInTable -->
+        <test-method signature="testNegativeTryFindUnknownFieldInTable(java.lang.String)[pri:0, instance:ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f]" started-at="2024-11-27T23:56:11 MSK" name="testNegativeTryFindUnknownFieldInTable" description="Проверяем валидацию формата команды" data-provider="wrongFormatCommandCases" finished-at="2024-11-27T23:56:11 MSK" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[SELECT=group_name FROM=groups.csv GROUPBY group_name]]>
+              </value>
+            </param>
+          </params>
+          <exception class="ru.mai.lessons.rpks.exception.WrongCommandFormatException">
+            <message>
+              <![CDATA[Invalid query: missing '=' in GROUPBY group_name]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[ru.mai.lessons.rpks.exception.WrongCommandFormatException: Invalid query: missing '=' in GROUPBY group_name
+at ru.mai.lessons.rpks.impl.ParseQuery.<init>(ParseQuery.java:20)
+at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:27)
+at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- ru.mai.lessons.rpks.exception.WrongCommandFormatException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNegativeTryFindUnknownFieldInTable -->
+        <test-method signature="testNegativeTryFindUnknownFieldInTable(java.lang.String)[pri:0, instance:ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f]" started-at="2024-11-27T23:56:11 MSK" name="testNegativeTryFindUnknownFieldInTable" description="Проверяем валидацию формата команды" data-provider="wrongFormatCommandCases" finished-at="2024-11-27T23:56:11 MSK" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[SELECT=full_name,subject_name FROM=students.csv,subjects.csv grade.csv WHERE=(grade='5')]]>
+              </value>
+            </param>
+          </params>
+          <exception class="ru.mai.lessons.rpks.exception.WrongCommandFormatException">
+            <message>
+              <![CDATA[subjects.csv grade.csv]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[ru.mai.lessons.rpks.exception.WrongCommandFormatException: subjects.csv grade.csv
+at ru.mai.lessons.rpks.impl.QueryHandler.joinTables(QueryHandler.java:166)
+at ru.mai.lessons.rpks.impl.QueryHandler.handleQuery(QueryHandler.java:30)
+at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:57)
+at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- ru.mai.lessons.rpks.exception.WrongCommandFormatException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNegativeTryFindUnknownFieldInTable -->
+        <test-method signature="testNegativeTryFindUnknownFieldInTable(java.lang.String)[pri:0, instance:ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f]" started-at="2024-11-27T23:56:11 MSK" name="testNegativeTryFindUnknownFieldInTable" description="Проверяем валидацию формата команды" data-provider="wrongFormatCommandCases" finished-at="2024-11-27T23:56:11 MSK" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[SELECT=full_name,subject_name FROM=students.csv,subjects.csv,grade.csv WHERE (grade='5')]]>
+              </value>
+            </param>
+          </params>
+          <exception class="ru.mai.lessons.rpks.exception.WrongCommandFormatException">
+            <message>
+              <![CDATA[grade.csv WHERE (grade='5')]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[ru.mai.lessons.rpks.exception.WrongCommandFormatException: grade.csv WHERE (grade='5')
+at ru.mai.lessons.rpks.impl.QueryHandler.joinTables(QueryHandler.java:166)
+at ru.mai.lessons.rpks.impl.QueryHandler.handleQuery(QueryHandler.java:30)
+at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:57)
+at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- ru.mai.lessons.rpks.exception.WrongCommandFormatException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNegativeTryFindUnknownFieldInTable -->
+        <test-method signature="testNegativeTryFindUnknownFieldInTable(java.lang.String)[pri:0, instance:ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f]" started-at="2024-11-27T23:56:11 MSK" name="testNegativeTryFindUnknownFieldInTable" description="Проверяем валидацию формата команды" data-provider="wrongFormatCommandCases" finished-at="2024-11-27T23:56:11 MSK" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[SELECT=full_name,subject_name FROM=students.csv,subjects.csv,grade.csv WHERE=grade='5']]>
+              </value>
+            </param>
+          </params>
+          <exception class="ru.mai.lessons.rpks.exception.WrongCommandFormatException">
+            <message>
+              <![CDATA[grade.csv WHERE=grade='5']]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[ru.mai.lessons.rpks.exception.WrongCommandFormatException: grade.csv WHERE=grade='5'
+at ru.mai.lessons.rpks.impl.QueryHandler.joinTables(QueryHandler.java:166)
+at ru.mai.lessons.rpks.impl.QueryHandler.handleQuery(QueryHandler.java:30)
+at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:57)
+at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- ru.mai.lessons.rpks.exception.WrongCommandFormatException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNegativeTryFindUnknownFieldInTable -->
+        <test-method signature="testNegativeTryFindUnknownFieldInTable(java.lang.String)[pri:0, instance:ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f]" started-at="2024-11-27T23:56:11 MSK" name="testNegativeTryFindUnknownFieldInTable" description="Проверяем валидацию формата команды" data-provider="wrongFormatCommandCases" finished-at="2024-11-27T23:56:11 MSK" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[SELECT=full_name,subject_name FROM=students.csv,subjects.csv,grade.csv WHERE=(grade=='5')]]>
+              </value>
+            </param>
+          </params>
+          <exception class="ru.mai.lessons.rpks.exception.WrongCommandFormatException">
+            <message>
+              <![CDATA[Invalid query: missing '=' in WHERE=(grade=='5')]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[ru.mai.lessons.rpks.exception.WrongCommandFormatException: Invalid query: missing '=' in WHERE=(grade=='5')
+at ru.mai.lessons.rpks.impl.ParseQuery.<init>(ParseQuery.java:20)
+at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:27)
+at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- ru.mai.lessons.rpks.exception.WrongCommandFormatException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNegativeTryFindUnknownFieldInTable -->
+        <test-method signature="testPositiveFindDataBySelectFromWhere(java.lang.String,java.util.List)[pri:0, instance:ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f]" started-at="2024-11-27T23:56:11 MSK" name="testPositiveFindDataBySelectFromWhere" description="Проверяем успешное выполнение запросов с условием SELECT+FROM+WHERE" data-provider="selectFromWhereCases" finished-at="2024-11-27T23:56:11 MSK" duration-ms="14" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[SELECT=group_name,grade,date FROM=students.csv,groups.csv,subjects.csv,grade.csv WHERE=(full_name='Иванов Иван' AND subject_name='Английский')]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[5ИНТ-001;5;17.01.2023]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPositiveFindDataBySelectFromWhere -->
+        <test-method signature="testPositiveFindDataBySelectFromWhere(java.lang.String,java.util.List)[pri:0, instance:ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f]" started-at="2024-11-27T23:56:11 MSK" name="testPositiveFindDataBySelectFromWhere" description="Проверяем успешное выполнение запросов с условием SELECT+FROM+WHERE" data-provider="selectFromWhereCases" finished-at="2024-11-27T23:56:11 MSK" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[SELECT=full_name,group_name,grade,date FROM=students.csv,groups.csv,subjects.csv,grade.csv WHERE=(subject_name='РПКС')]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[Иванов Иван;5ИНТ-001;5;05.01.2023, Петров Олег;5ИНТ-001;4;05.01.2023, Игнатова Ольга;5ИНТ-002;4;06.01.2023, Сидоров Николай;5ПМИ-001;5;07.01.2023, Калинина Дарья;5ПМИ-001;3;07.01.2023, Кузнецов Михаил;5ИНТ-001;5;05.01.2023, Орлов Виктор;5ПМИ-001;4;07.01.2023, Никитина Ирина;5ИНТ-002;3;06.01.2023]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPositiveFindDataBySelectFromWhere -->
+        <test-method signature="testPositiveFindDataBySelectFromWhere(java.lang.String,java.util.List)[pri:0, instance:ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f]" started-at="2024-11-27T23:56:11 MSK" name="testPositiveFindDataBySelectFromWhere" description="Проверяем успешное выполнение запросов с условием SELECT+FROM+WHERE" data-provider="selectFromWhereCases" finished-at="2024-11-27T23:56:11 MSK" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[SELECT=full_name,subject_name FROM=students.csv,subjects.csv,grade.csv WHERE=(grade='3' OR grade='4' OR grade='2')]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[Иванов Иван;Матан, Петров Олег;РПКС, Петров Олег;Матан, Петров Олег;История, Игнатова Ольга;РПКС, Калинина Дарья;РПКС, Калинина Дарья;Матан, Калинина Дарья;История, Калинина Дарья;Английский, Кузнецов Михаил;Матан, Кузнецов Михаил;История, Кузнецов Михаил;Английский, Орлов Виктор;РПКС, Орлов Виктор;Матан, Орлов Виктор;История, Орлов Виктор;Английский, Никитина Ирина;РПКС, Никитина Ирина;Матан, Никитина Ирина;Английский]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPositiveFindDataBySelectFromWhere -->
+        <test-method signature="testPositiveFindDataBySelectFromWhere(java.lang.String,java.util.List)[pri:0, instance:ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f]" started-at="2024-11-27T23:56:11 MSK" name="testPositiveFindDataBySelectFromWhere" description="Проверяем успешное выполнение запросов с условием SELECT+FROM+WHERE" data-provider="selectFromWhereCases" finished-at="2024-11-27T23:56:11 MSK" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[SELECT=group_name,full_name,subject_name FROM=students.csv,groups.csv,subjects.csv,grade.csv WHERE=(grade='2')]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[5ИНТ-002;Никитина Ирина;Английский]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPositiveFindDataBySelectFromWhere -->
+        <test-method signature="testPositiveFindDataBySelectFromWhere(java.lang.String,java.util.List)[pri:0, instance:ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f]" started-at="2024-11-27T23:56:11 MSK" name="testPositiveFindDataBySelectFromWhere" description="Проверяем успешное выполнение запросов с условием SELECT+FROM+WHERE" data-provider="selectFromWhereCases" finished-at="2024-11-27T23:56:11 MSK" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[SELECT=full_name,subject_name FROM=students.csv,subjects.csv,grade.csv WHERE=(grade='1')]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPositiveFindDataBySelectFromWhere -->
+        <test-method signature="testPositiveFindDataBySelectFromWhereGroupBy(java.lang.String,java.util.List)[pri:0, instance:ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f]" started-at="2024-11-27T23:56:11 MSK" name="testPositiveFindDataBySelectFromWhereGroupBy" description="Проверяем успешное выполнение запросов с группировкой SELECT+FROM+WHERE+GROUPBY" data-provider="selectFromWhereGroupByCases" finished-at="2024-11-27T23:56:11 MSK" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[SELECT=group_name FROM=groups.csv GROUPBY=group_name]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[5ИНТ-001, 5ИНТ-002, 5ПМИ-001]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPositiveFindDataBySelectFromWhereGroupBy -->
+        <test-method signature="testPositiveFindDataBySelectFromWhereGroupBy(java.lang.String,java.util.List)[pri:0, instance:ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f]" started-at="2024-11-27T23:56:11 MSK" name="testPositiveFindDataBySelectFromWhereGroupBy" description="Проверяем успешное выполнение запросов с группировкой SELECT+FROM+WHERE+GROUPBY" data-provider="selectFromWhereGroupByCases" finished-at="2024-11-27T23:56:11 MSK" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[SELECT=subject_name FROM=subjects.csv,grade.csv WHERE=(grade='5') GROUPBY=subject_name]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[РПКС, История, Английский, Матан]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPositiveFindDataBySelectFromWhereGroupBy -->
+        <test-method signature="testPositiveFindDataBySimpleSelectFrom(java.lang.String,java.util.List)[pri:0, instance:ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f]" started-at="2024-11-27T23:56:11 MSK" name="testPositiveFindDataBySimpleSelectFrom" description="Проверяем успешное выполнение простых запросов SELECT+FROM" data-provider="selectFromCases" finished-at="2024-11-27T23:56:11 MSK" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[SELECT=full_name FROM=students.csv]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[Иванов Иван, Петров Олег, Игнатова Ольга, Сидоров Николай, Калинина Дарья, Кузнецов Михаил, Орлов Виктор, Никитина Ирина]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPositiveFindDataBySimpleSelectFrom -->
+        <test-method signature="testPositiveFindDataBySimpleSelectFrom(java.lang.String,java.util.List)[pri:0, instance:ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f]" started-at="2024-11-27T23:56:11 MSK" name="testPositiveFindDataBySimpleSelectFrom" description="Проверяем успешное выполнение простых запросов SELECT+FROM" data-provider="selectFromCases" finished-at="2024-11-27T23:56:11 MSK" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[SELECT=id,full_name FROM=students.csv]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[0;Иванов Иван, 1;Петров Олег, 2;Игнатова Ольга, 3;Сидоров Николай, 4;Калинина Дарья, 5;Кузнецов Михаил, 6;Орлов Виктор, 7;Никитина Ирина]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPositiveFindDataBySimpleSelectFrom -->
+        <test-method signature="testPositiveFindDataBySimpleSelectFrom(java.lang.String,java.util.List)[pri:0, instance:ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f]" started-at="2024-11-27T23:56:11 MSK" name="testPositiveFindDataBySimpleSelectFrom" description="Проверяем успешное выполнение простых запросов SELECT+FROM" data-provider="selectFromCases" finished-at="2024-11-27T23:56:11 MSK" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[SELECT=full_name,id FROM=students.csv]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[Иванов Иван;0, Петров Олег;1, Игнатова Ольга;2, Сидоров Николай;3, Калинина Дарья;4, Кузнецов Михаил;5, Орлов Виктор;6, Никитина Ирина;7]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPositiveFindDataBySimpleSelectFrom -->
+        <test-method signature="testPositiveFindDataBySimpleSelectFrom(java.lang.String,java.util.List)[pri:0, instance:ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f]" started-at="2024-11-27T23:56:11 MSK" name="testPositiveFindDataBySimpleSelectFrom" description="Проверяем успешное выполнение простых запросов SELECT+FROM" data-provider="selectFromCases" finished-at="2024-11-27T23:56:11 MSK" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[SELECT=subject_name FROM=subjects.csv]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[РПКС, Матан, История, Английский]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPositiveFindDataBySimpleSelectFrom -->
+        <test-method signature="testPositiveFindDataBySimpleSelectFrom(java.lang.String,java.util.List)[pri:0, instance:ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f]" started-at="2024-11-27T23:56:11 MSK" name="testPositiveFindDataBySimpleSelectFrom" description="Проверяем успешное выполнение простых запросов SELECT+FROM" data-provider="selectFromCases" finished-at="2024-11-27T23:56:11 MSK" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[SELECT=group_name,student_id FROM=groups.csv]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[5ИНТ-001;5, 5ИНТ-002;2, 5ПМИ-001;4, 5ИНТ-001;0, 5ИНТ-001;1, 5ИНТ-002;7, 5ПМИ-001;3, 5ПМИ-001;6]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPositiveFindDataBySimpleSelectFrom -->
+      </class> <!-- ru.mai.lessons.rpks.impl.DatabaseDriverTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

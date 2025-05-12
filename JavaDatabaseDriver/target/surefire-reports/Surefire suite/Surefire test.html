@@ -1,0 +1,746 @@
+<html>
+<head>
+<title>TestNG:  Surefire test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Surefire test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>25/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Nov 27 23:56:11 MSK 2024</td>
+</tr>
+<tr><td>Total time:</td><td>0 seconds (170 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable()'><b>testNegativeTryFindUnknownFieldInTable</b><br>Test class: ru.mai.lessons.rpks.impl.DatabaseDriverTest<br>Test method: Проверяем валидацию формата команды<br>Parameters: FROM=students.csv</td>
+<td><div><pre>ru.mai.lessons.rpks.exception.WrongCommandFormatException: Your query has no SELECT
+	at ru.mai.lessons.rpks.impl.ParseQuery.getColumnsToSELECT(ParseQuery.java:35)
+	at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:41)
+	at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1313916817", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1313916817'><pre>ru.mai.lessons.rpks.exception.WrongCommandFormatException: Your query has no SELECT
+	at ru.mai.lessons.rpks.impl.ParseQuery.getColumnsToSELECT(ParseQuery.java:35)
+	at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:41)
+	at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f</td></tr>
+<tr>
+<td title='ru.mai.lessons.rpks.impl.DatabaseDriverTest.testPositiveFindDataBySimpleSelectFrom()'><b>testPositiveFindDataBySimpleSelectFrom</b><br>Test class: ru.mai.lessons.rpks.impl.DatabaseDriverTest<br>Test method: Проверяем успешное выполнение простых запросов SELECT+FROM<br>Parameters: SELECT=group_name,student_id FROM=groups.csv, [5ИНТ-001;5, 5ИНТ-002;2, 5ПМИ-001;4, 5ИНТ-001;0, 5ИНТ-001;1, 5ИНТ-002;7, 5ПМИ-001;3, 5ПМИ-001;6]</td>
+<td></td>
+<td>0</td>
+<td>ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f</td></tr>
+<tr>
+<td title='ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable()'><b>testNegativeTryFindUnknownFieldInTable</b><br>Test class: ru.mai.lessons.rpks.impl.DatabaseDriverTest<br>Test method: Проверяем реакцию на попытку получить данные из поля, которого нет в таблице</td>
+<td><div><pre>ru.mai.lessons.rpks.exception.FieldNotFoundInTableException: wrong field!
+	at ru.mai.lessons.rpks.impl.QueryHandler.selectColumns(QueryHandler.java:58)
+	at ru.mai.lessons.rpks.impl.QueryHandler.handleQuery(QueryHandler.java:40)
+	at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:57)
+	at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:152)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1867139015", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1867139015'><pre>ru.mai.lessons.rpks.exception.FieldNotFoundInTableException: wrong field!
+	at ru.mai.lessons.rpks.impl.QueryHandler.selectColumns(QueryHandler.java:58)
+	at ru.mai.lessons.rpks.impl.QueryHandler.handleQuery(QueryHandler.java:40)
+	at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:57)
+	at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:152)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f</td></tr>
+<tr>
+<td title='ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable()'><b>testNegativeTryFindUnknownFieldInTable</b><br>Test class: ru.mai.lessons.rpks.impl.DatabaseDriverTest<br>Test method: Проверяем валидацию формата команды<br>Parameters: SELECT=full_name,subject_name FROM=students.csv,subjects.csv grade.csv WHERE=(grade='5')</td>
+<td><div><pre>ru.mai.lessons.rpks.exception.WrongCommandFormatException: subjects.csv grade.csv
+	at ru.mai.lessons.rpks.impl.QueryHandler.joinTables(QueryHandler.java:166)
+	at ru.mai.lessons.rpks.impl.QueryHandler.handleQuery(QueryHandler.java:30)
+	at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:57)
+	at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1231156911", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1231156911'><pre>ru.mai.lessons.rpks.exception.WrongCommandFormatException: subjects.csv grade.csv
+	at ru.mai.lessons.rpks.impl.QueryHandler.joinTables(QueryHandler.java:166)
+	at ru.mai.lessons.rpks.impl.QueryHandler.handleQuery(QueryHandler.java:30)
+	at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:57)
+	at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f</td></tr>
+<tr>
+<td title='ru.mai.lessons.rpks.impl.DatabaseDriverTest.testPositiveFindDataBySelectFromWhere()'><b>testPositiveFindDataBySelectFromWhere</b><br>Test class: ru.mai.lessons.rpks.impl.DatabaseDriverTest<br>Test method: Проверяем успешное выполнение запросов с условием SELECT+FROM+WHERE<br>Parameters: SELECT=group_name,grade,date FROM=students.csv,groups.csv,subjects.csv,grade.csv WHERE=(full_name='Иванов Иван' AND subject_name='Английский'), [5ИНТ-001;5;17.01.2023]</td>
+<td></td>
+<td>0</td>
+<td>ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f</td></tr>
+<tr>
+<td title='ru.mai.lessons.rpks.impl.DatabaseDriverTest.testPositiveFindDataBySelectFromWhere()'><b>testPositiveFindDataBySelectFromWhere</b><br>Test class: ru.mai.lessons.rpks.impl.DatabaseDriverTest<br>Test method: Проверяем успешное выполнение запросов с условием SELECT+FROM+WHERE<br>Parameters: SELECT=full_name,subject_name FROM=students.csv,subjects.csv,grade.csv WHERE=(grade='1'), []</td>
+<td></td>
+<td>0</td>
+<td>ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f</td></tr>
+<tr>
+<td title='ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable()'><b>testNegativeTryFindUnknownFieldInTable</b><br>Test class: ru.mai.lessons.rpks.impl.DatabaseDriverTest<br>Test method: Проверяем валидацию формата команды<br>Parameters: SELECT=group_name</td>
+<td><div><pre>ru.mai.lessons.rpks.exception.WrongCommandFormatException: Your query has no FROM
+	at ru.mai.lessons.rpks.impl.ParseQuery.getTablesForFROM(ParseQuery.java:42)
+	at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:40)
+	at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace510063093", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace510063093'><pre>ru.mai.lessons.rpks.exception.WrongCommandFormatException: Your query has no FROM
+	at ru.mai.lessons.rpks.impl.ParseQuery.getTablesForFROM(ParseQuery.java:42)
+	at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:40)
+	at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f</td></tr>
+<tr>
+<td title='ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable()'><b>testNegativeTryFindUnknownFieldInTable</b><br>Test class: ru.mai.lessons.rpks.impl.DatabaseDriverTest<br>Test method: Проверяем валидацию формата команды<br>Parameters: SELECT=full_name,subject_name FROM=students.csv,subjects.csv,grade.csv WHERE=grade='5'</td>
+<td><div><pre>ru.mai.lessons.rpks.exception.WrongCommandFormatException: grade.csv WHERE=grade=&apos;5&apos;
+	at ru.mai.lessons.rpks.impl.QueryHandler.joinTables(QueryHandler.java:166)
+	at ru.mai.lessons.rpks.impl.QueryHandler.handleQuery(QueryHandler.java:30)
+	at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:57)
+	at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1708169732", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1708169732'><pre>ru.mai.lessons.rpks.exception.WrongCommandFormatException: grade.csv WHERE=grade=&apos;5&apos;
+	at ru.mai.lessons.rpks.impl.QueryHandler.joinTables(QueryHandler.java:166)
+	at ru.mai.lessons.rpks.impl.QueryHandler.handleQuery(QueryHandler.java:30)
+	at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:57)
+	at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f</td></tr>
+<tr>
+<td title='ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable()'><b>testNegativeTryFindUnknownFieldInTable</b><br>Test class: ru.mai.lessons.rpks.impl.DatabaseDriverTest<br>Test method: Проверяем валидацию формата команды<br>Parameters: SELECT=group_name FROM=groups.csv GROUPBY group_name</td>
+<td><div><pre>ru.mai.lessons.rpks.exception.WrongCommandFormatException: Invalid query: missing &apos;=&apos; in GROUPBY group_name
+	at ru.mai.lessons.rpks.impl.ParseQuery.&lt;init&gt;(ParseQuery.java:20)
+	at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:27)
+	at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace961409111", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace961409111'><pre>ru.mai.lessons.rpks.exception.WrongCommandFormatException: Invalid query: missing &apos;=&apos; in GROUPBY group_name
+	at ru.mai.lessons.rpks.impl.ParseQuery.&lt;init&gt;(ParseQuery.java:20)
+	at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:27)
+	at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f</td></tr>
+<tr>
+<td title='ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable()'><b>testNegativeTryFindUnknownFieldInTable</b><br>Test class: ru.mai.lessons.rpks.impl.DatabaseDriverTest<br>Test method: Проверяем валидацию формата команды<br>Parameters: SELECT=group_name FROM=groups.csv GROUPBY=</td>
+<td><div><pre>ru.mai.lessons.rpks.exception.WrongCommandFormatException: Invalid query: GROUPBY=
+	at ru.mai.lessons.rpks.impl.ParseQuery.&lt;init&gt;(ParseQuery.java:24)
+	at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:27)
+	at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1911152052", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1911152052'><pre>ru.mai.lessons.rpks.exception.WrongCommandFormatException: Invalid query: GROUPBY=
+	at ru.mai.lessons.rpks.impl.ParseQuery.&lt;init&gt;(ParseQuery.java:24)
+	at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:27)
+	at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f</td></tr>
+<tr>
+<td title='ru.mai.lessons.rpks.impl.DatabaseDriverTest.testPositiveFindDataBySimpleSelectFrom()'><b>testPositiveFindDataBySimpleSelectFrom</b><br>Test class: ru.mai.lessons.rpks.impl.DatabaseDriverTest<br>Test method: Проверяем успешное выполнение простых запросов SELECT+FROM<br>Parameters: SELECT=full_name FROM=students.csv, [Иванов Иван, Петров Олег, Игнатова Ольга, Сидоров Николай, Калинина Дарья, Кузнецов Михаил, Орлов Виктор, Никитина Ирина]</td>
+<td></td>
+<td>0</td>
+<td>ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f</td></tr>
+<tr>
+<td title='ru.mai.lessons.rpks.impl.DatabaseDriverTest.testPositiveFindDataBySelectFromWhereGroupBy()'><b>testPositiveFindDataBySelectFromWhereGroupBy</b><br>Test class: ru.mai.lessons.rpks.impl.DatabaseDriverTest<br>Test method: Проверяем успешное выполнение запросов с группировкой SELECT+FROM+WHERE+GROUPBY<br>Parameters: SELECT=group_name FROM=groups.csv GROUPBY=group_name, [5ИНТ-001, 5ИНТ-002, 5ПМИ-001]</td>
+<td></td>
+<td>0</td>
+<td>ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f</td></tr>
+<tr>
+<td title='ru.mai.lessons.rpks.impl.DatabaseDriverTest.testPositiveFindDataBySelectFromWhereGroupBy()'><b>testPositiveFindDataBySelectFromWhereGroupBy</b><br>Test class: ru.mai.lessons.rpks.impl.DatabaseDriverTest<br>Test method: Проверяем успешное выполнение запросов с группировкой SELECT+FROM+WHERE+GROUPBY<br>Parameters: SELECT=subject_name FROM=subjects.csv,grade.csv WHERE=(grade='5') GROUPBY=subject_name, [РПКС, История, Английский, Матан]</td>
+<td></td>
+<td>0</td>
+<td>ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f</td></tr>
+<tr>
+<td title='ru.mai.lessons.rpks.impl.DatabaseDriverTest.testPositiveFindDataBySelectFromWhere()'><b>testPositiveFindDataBySelectFromWhere</b><br>Test class: ru.mai.lessons.rpks.impl.DatabaseDriverTest<br>Test method: Проверяем успешное выполнение запросов с условием SELECT+FROM+WHERE<br>Parameters: SELECT=full_name,subject_name FROM=students.csv,subjects.csv,grade.csv WHERE=(grade='3' OR grade='4' OR grade='2'), [Иванов Иван;Матан, Петров Олег;РПКС, Петров Олег;Матан, Петров Олег;История, Игнатова Ольга;РПКС, Калинина Дарья;РПКС, Калинина Дарья;Матан, Калинина Дарья;История, Калинина Дарья;Английский, Кузнецов Михаил;Матан, Кузнецов Михаил;История, Кузнецов Михаил;Английский, Орлов Виктор;РПКС, Орлов Виктор;Матан, Орлов Виктор;История, Орлов Виктор;Английский, Никитина Ирина;РПКС, Никитина Ирина;Матан, Никитина Ирина;Английский]</td>
+<td></td>
+<td>0</td>
+<td>ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f</td></tr>
+<tr>
+<td title='ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable()'><b>testNegativeTryFindUnknownFieldInTable</b><br>Test class: ru.mai.lessons.rpks.impl.DatabaseDriverTest<br>Test method: Проверяем валидацию формата команды<br>Parameters: SELECT=group_name FROM= GROUPBY=group_name</td>
+<td><div><pre>ru.mai.lessons.rpks.exception.WrongCommandFormatException: Invalid query: FROM= 
+	at ru.mai.lessons.rpks.impl.ParseQuery.&lt;init&gt;(ParseQuery.java:24)
+	at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:27)
+	at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1487500813", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1487500813'><pre>ru.mai.lessons.rpks.exception.WrongCommandFormatException: Invalid query: FROM= 
+	at ru.mai.lessons.rpks.impl.ParseQuery.&lt;init&gt;(ParseQuery.java:24)
+	at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:27)
+	at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f</td></tr>
+<tr>
+<td title='ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable()'><b>testNegativeTryFindUnknownFieldInTable</b><br>Test class: ru.mai.lessons.rpks.impl.DatabaseDriverTest<br>Test method: Проверяем валидацию формата команды<br>Parameters: SELECT group_name FROM=students.csv</td>
+<td><div><pre>ru.mai.lessons.rpks.exception.WrongCommandFormatException: Invalid query: missing &apos;=&apos; in SELECT group_name 
+	at ru.mai.lessons.rpks.impl.ParseQuery.&lt;init&gt;(ParseQuery.java:20)
+	at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:27)
+	at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2044215423", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2044215423'><pre>ru.mai.lessons.rpks.exception.WrongCommandFormatException: Invalid query: missing &apos;=&apos; in SELECT group_name 
+	at ru.mai.lessons.rpks.impl.ParseQuery.&lt;init&gt;(ParseQuery.java:20)
+	at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:27)
+	at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f</td></tr>
+<tr>
+<td title='ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable()'><b>testNegativeTryFindUnknownFieldInTable</b><br>Test class: ru.mai.lessons.rpks.impl.DatabaseDriverTest<br>Test method: Проверяем валидацию формата команды<br>Parameters: SELECT=full_name,subject_name FROM=students.csv,subjects.csv,grade.csv WHERE=(grade=='5')</td>
+<td><div><pre>ru.mai.lessons.rpks.exception.WrongCommandFormatException: Invalid query: missing &apos;=&apos; in WHERE=(grade==&apos;5&apos;)
+	at ru.mai.lessons.rpks.impl.ParseQuery.&lt;init&gt;(ParseQuery.java:20)
+	at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:27)
+	at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace868815265", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace868815265'><pre>ru.mai.lessons.rpks.exception.WrongCommandFormatException: Invalid query: missing &apos;=&apos; in WHERE=(grade==&apos;5&apos;)
+	at ru.mai.lessons.rpks.impl.ParseQuery.&lt;init&gt;(ParseQuery.java:20)
+	at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:27)
+	at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f</td></tr>
+<tr>
+<td title='ru.mai.lessons.rpks.impl.DatabaseDriverTest.testPositiveFindDataBySimpleSelectFrom()'><b>testPositiveFindDataBySimpleSelectFrom</b><br>Test class: ru.mai.lessons.rpks.impl.DatabaseDriverTest<br>Test method: Проверяем успешное выполнение простых запросов SELECT+FROM<br>Parameters: SELECT=subject_name FROM=subjects.csv, [РПКС, Матан, История, Английский]</td>
+<td></td>
+<td>0</td>
+<td>ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f</td></tr>
+<tr>
+<td title='ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable()'><b>testNegativeTryFindUnknownFieldInTable</b><br>Test class: ru.mai.lessons.rpks.impl.DatabaseDriverTest<br>Test method: Проверяем валидацию формата команды<br>Parameters: SELECT= FROM=groups.csv GROUPBY=group_name</td>
+<td><div><pre>ru.mai.lessons.rpks.exception.WrongCommandFormatException: Invalid query: SELECT= 
+	at ru.mai.lessons.rpks.impl.ParseQuery.&lt;init&gt;(ParseQuery.java:24)
+	at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:27)
+	at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1966124444", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1966124444'><pre>ru.mai.lessons.rpks.exception.WrongCommandFormatException: Invalid query: SELECT= 
+	at ru.mai.lessons.rpks.impl.ParseQuery.&lt;init&gt;(ParseQuery.java:24)
+	at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:27)
+	at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f</td></tr>
+<tr>
+<td title='ru.mai.lessons.rpks.impl.DatabaseDriverTest.testPositiveFindDataBySelectFromWhere()'><b>testPositiveFindDataBySelectFromWhere</b><br>Test class: ru.mai.lessons.rpks.impl.DatabaseDriverTest<br>Test method: Проверяем успешное выполнение запросов с условием SELECT+FROM+WHERE<br>Parameters: SELECT=full_name,group_name,grade,date FROM=students.csv,groups.csv,subjects.csv,grade.csv WHERE=(subject_name='РПКС'), [Иванов Иван;5ИНТ-001;5;05.01.2023, Петров Олег;5ИНТ-001;4;05.01.2023, Игнатова Ольга;5ИНТ-002;4;06.01.2023, Сидоров Николай;5ПМИ-001;5;07.01.2023, Калинина Дарья;5ПМИ-001;3;07.01.2023, Кузнецов Михаил;5ИНТ-001;5;05.01.2023, Орлов Виктор;5ПМИ-001;4;07.01.2023, Никитина Ирина;5ИНТ-002;3;06.01.2023]</td>
+<td></td>
+<td>0</td>
+<td>ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f</td></tr>
+<tr>
+<td title='ru.mai.lessons.rpks.impl.DatabaseDriverTest.testPositiveFindDataBySimpleSelectFrom()'><b>testPositiveFindDataBySimpleSelectFrom</b><br>Test class: ru.mai.lessons.rpks.impl.DatabaseDriverTest<br>Test method: Проверяем успешное выполнение простых запросов SELECT+FROM<br>Parameters: SELECT=full_name,id FROM=students.csv, [Иванов Иван;0, Петров Олег;1, Игнатова Ольга;2, Сидоров Николай;3, Калинина Дарья;4, Кузнецов Михаил;5, Орлов Виктор;6, Никитина Ирина;7]</td>
+<td></td>
+<td>0</td>
+<td>ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f</td></tr>
+<tr>
+<td title='ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable()'><b>testNegativeTryFindUnknownFieldInTable</b><br>Test class: ru.mai.lessons.rpks.impl.DatabaseDriverTest<br>Test method: Проверяем валидацию формата команды<br>Parameters: SELECT=group_name FROM students.csv</td>
+<td><div><pre>ru.mai.lessons.rpks.exception.WrongCommandFormatException: Invalid query: missing &apos;=&apos; in FROM students.csv
+	at ru.mai.lessons.rpks.impl.ParseQuery.&lt;init&gt;(ParseQuery.java:20)
+	at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:27)
+	at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1606304070", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1606304070'><pre>ru.mai.lessons.rpks.exception.WrongCommandFormatException: Invalid query: missing &apos;=&apos; in FROM students.csv
+	at ru.mai.lessons.rpks.impl.ParseQuery.&lt;init&gt;(ParseQuery.java:20)
+	at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:27)
+	at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f</td></tr>
+<tr>
+<td title='ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable()'><b>testNegativeTryFindUnknownFieldInTable</b><br>Test class: ru.mai.lessons.rpks.impl.DatabaseDriverTest<br>Test method: Проверяем валидацию формата команды<br>Parameters: SELECT=full_name,subject_name FROM=students.csv,subjects.csv,grade.csv WHERE (grade='5')</td>
+<td><div><pre>ru.mai.lessons.rpks.exception.WrongCommandFormatException: grade.csv WHERE (grade=&apos;5&apos;)
+	at ru.mai.lessons.rpks.impl.QueryHandler.joinTables(QueryHandler.java:166)
+	at ru.mai.lessons.rpks.impl.QueryHandler.handleQuery(QueryHandler.java:30)
+	at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:57)
+	at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1525409936", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1525409936'><pre>ru.mai.lessons.rpks.exception.WrongCommandFormatException: grade.csv WHERE (grade=&apos;5&apos;)
+	at ru.mai.lessons.rpks.impl.QueryHandler.joinTables(QueryHandler.java:166)
+	at ru.mai.lessons.rpks.impl.QueryHandler.handleQuery(QueryHandler.java:30)
+	at ru.mai.lessons.rpks.impl.DatabaseDriver.find(DatabaseDriver.java:57)
+	at ru.mai.lessons.rpks.impl.DatabaseDriverTest.testNegativeTryFindUnknownFieldInTable(DatabaseDriverTest.java:185)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f</td></tr>
+<tr>
+<td title='ru.mai.lessons.rpks.impl.DatabaseDriverTest.testPositiveFindDataBySimpleSelectFrom()'><b>testPositiveFindDataBySimpleSelectFrom</b><br>Test class: ru.mai.lessons.rpks.impl.DatabaseDriverTest<br>Test method: Проверяем успешное выполнение простых запросов SELECT+FROM<br>Parameters: SELECT=id,full_name FROM=students.csv, [0;Иванов Иван, 1;Петров Олег, 2;Игнатова Ольга, 3;Сидоров Николай, 4;Калинина Дарья, 5;Кузнецов Михаил, 6;Орлов Виктор, 7;Никитина Ирина]</td>
+<td></td>
+<td>0</td>
+<td>ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f</td></tr>
+<tr>
+<td title='ru.mai.lessons.rpks.impl.DatabaseDriverTest.testPositiveFindDataBySelectFromWhere()'><b>testPositiveFindDataBySelectFromWhere</b><br>Test class: ru.mai.lessons.rpks.impl.DatabaseDriverTest<br>Test method: Проверяем успешное выполнение запросов с условием SELECT+FROM+WHERE<br>Parameters: SELECT=group_name,full_name,subject_name FROM=students.csv,groups.csv,subjects.csv,grade.csv WHERE=(grade='2'), [5ИНТ-002;Никитина Ирина;Английский]</td>
+<td></td>
+<td>0</td>
+<td>ru.mai.lessons.rpks.impl.DatabaseDriverTest@6356695f</td></tr>
+</table><p>
+</body>
+</html>

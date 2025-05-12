@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-11-19T23:06:43 MSK" name="Surefire suite" finished-at="2024-11-19T23:06:43 MSK" duration-ms="80">
+    <groups>
+    </groups>
+    <test started-at="2024-11-19T23:06:43 MSK" name="Surefire test" finished-at="2024-11-19T23:06:43 MSK" duration-ms="80">
+      <class name="ru.mai.lessons.rpks.impl.DirectorySizeCheckerTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ru.mai.lessons.rpks.impl.DirectorySizeCheckerTest@4567f35d]" started-at="2024-11-19T23:06:43 MSK" name="setUp" finished-at="2024-11-19T23:06:43 MSK" duration-ms="15" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testNegativeCheckUnknownDirectory()[pri:0, instance:ru.mai.lessons.rpks.impl.DirectorySizeCheckerTest@4567f35d]" started-at="2024-11-19T23:06:43 MSK" name="testNegativeCheckUnknownDirectory" description="Проверка реакции сервиса на несуществующую директорию" finished-at="2024-11-19T23:06:43 MSK" duration-ms="4" status="PASS">
+          <exception class="ru.mai.lessons.rpks.exception.DirectoryAccessException">
+            <message>
+              <![CDATA[Directory does not exist]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[ru.mai.lessons.rpks.exception.DirectoryAccessException: Directory does not exist
+at ru.mai.lessons.rpks.impl.DirectorySizeChecker.checkSize(DirectorySizeChecker.java:18)
+at ru.mai.lessons.rpks.impl.DirectorySizeCheckerTest.testNegativeCheckUnknownDirectory(DirectorySizeCheckerTest.java:69)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- ru.mai.lessons.rpks.exception.DirectoryAccessException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNegativeCheckUnknownDirectory -->
+        <test-method signature="testPositiveCheckEmptyDirectory()[pri:0, instance:ru.mai.lessons.rpks.impl.DirectorySizeCheckerTest@4567f35d]" started-at="2024-11-19T23:06:43 MSK" name="testPositiveCheckEmptyDirectory" description="Проверка размера существующей пустой директории" finished-at="2024-11-19T23:06:43 MSK" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPositiveCheckEmptyDirectory -->
+        <test-method signature="testPositiveCheckSize(java.lang.String)[pri:0, instance:ru.mai.lessons.rpks.impl.DirectorySizeCheckerTest@4567f35d]" started-at="2024-11-19T23:06:43 MSK" name="testPositiveCheckSize" description="Проверка размера существующей непустой директории" data-provider="positiveCases" finished-at="2024-11-19T23:06:43 MSK" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dogs]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPositiveCheckSize -->
+        <test-method signature="testPositiveCheckSize(java.lang.String)[pri:0, instance:ru.mai.lessons.rpks.impl.DirectorySizeCheckerTest@4567f35d]" started-at="2024-11-19T23:06:43 MSK" name="testPositiveCheckSize" description="Проверка размера существующей непустой директории" data-provider="positiveCases" finished-at="2024-11-19T23:06:43 MSK" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[cats]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPositiveCheckSize -->
+      </class> <!-- ru.mai.lessons.rpks.impl.DirectorySizeCheckerTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

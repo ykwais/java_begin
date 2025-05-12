@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="ru.mai.lessons.rpks.impl.DatabaseDriverTest" time="0.761" tests="25" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1251"/>
+    <property name="java.class.path" value="C:\Users\fedor\IdeaProjects\labs_3_1_course\JavaDatabaseDriver\target\test-classes;C:\Users\fedor\IdeaProjects\labs_3_1_course\JavaDatabaseDriver\target\classes;C:\Users\fedor\.m2\repository\ch\qos\logback\logback-classic\1.4.11\logback-classic-1.4.11.jar;C:\Users\fedor\.m2\repository\ch\qos\logback\logback-core\1.4.11\logback-core-1.4.11.jar;C:\Users\fedor\.m2\repository\org\slf4j\slf4j-api\2.0.7\slf4j-api-2.0.7.jar;C:\Users\fedor\.m2\repository\org\projectlombok\lombok\1.18.30\lombok-1.18.30.jar;C:\Users\fedor\.m2\repository\org\testng\testng\7.8.0\testng-7.8.0.jar;C:\Users\fedor\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\fedor\.m2\repository\org\webjars\jquery\3.6.1\jquery-3.6.1.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Europe/Moscow"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="RU"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
+    <property name="sun.java.command" value="C:\Users\fedor\AppData\Local\Temp\surefire5383148381036657328\surefirebooter-20241127235610758_3.jar C:\Users\fedor\AppData\Local\Temp\surefire5383148381036657328 2024-11-27T23-56-10_629-jvmRun1 surefire-20241127235610758_1tmp surefire_0-20241127235610758_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\fedor\IdeaProjects\labs_3_1_course\JavaDatabaseDriver\target\test-classes;C:\Users\fedor\IdeaProjects\labs_3_1_course\JavaDatabaseDriver\target\classes;C:\Users\fedor\.m2\repository\ch\qos\logback\logback-classic\1.4.11\logback-classic-1.4.11.jar;C:\Users\fedor\.m2\repository\ch\qos\logback\logback-core\1.4.11\logback-core-1.4.11.jar;C:\Users\fedor\.m2\repository\org\slf4j\slf4j-api\2.0.7\slf4j-api-2.0.7.jar;C:\Users\fedor\.m2\repository\org\projectlombok\lombok\1.18.30\lombok-1.18.30.jar;C:\Users\fedor\.m2\repository\org\testng\testng\7.8.0\testng-7.8.0.jar;C:\Users\fedor\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\fedor\.m2\repository\org\webjars\jquery\3.6.1\jquery-3.6.1.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\fedor"/>
+    <property name="user.language" value="ru"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-10-15"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-21"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\fedor\IdeaProjects\labs_3_1_course\JavaDatabaseDriver"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\fedor\AppData\Local\Temp\surefire5383148381036657328\surefirebooter-20241127235610758_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.5+9-LTS-239"/>
+    <property name="user.name" value="fedor"/>
+    <property name="stdout.encoding" value="Cp1251"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\fedor\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\fedor\AppData\Local\Temp\"/>
+    <property name="java.version" value="21.0.5"/>
+    <property name="user.dir" value="C:\Users\fedor\IdeaProjects\labs_3_1_course\JavaDatabaseDriver"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1251"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-21\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\TortoiseGit\bin;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\Go\bin;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Qt6.7.0\Qt\6.7.0\mingw_64\bin;C:\Program Files\Apache\Maven\apache-maven-3.9.9\bin;C:\Program Files\Java\jdk-21\bin;C:\Users\fedor\AppData\Local\Microsoft\WindowsApps;;C:\Users\fedor\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\GoLand 2024.1.4\bin;;C:\Users\fedor\go\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2024.2.3\bin;;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1251"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="21.0.5+9-LTS-239"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="65.0"/>
+  </properties>
+  <testcase name="testNegativeTryFindUnknownFieldInTable" classname="ru.mai.lessons.rpks.impl.DatabaseDriverTest" time="0.011"/>
+  <testcase name="testNegativeTryFindUnknownFieldInTable[SELECT group_name FROM=students.csv](1)" classname="ru.mai.lessons.rpks.impl.DatabaseDriverTest" time="0.003"/>
+  <testcase name="testNegativeTryFindUnknownFieldInTable[SELECT=group_name FROM students.csv](2)" classname="ru.mai.lessons.rpks.impl.DatabaseDriverTest" time="0.001"/>
+  <testcase name="testNegativeTryFindUnknownFieldInTable[SELECT=group_name](3)" classname="ru.mai.lessons.rpks.impl.DatabaseDriverTest" time="0.003"/>
+  <testcase name="testNegativeTryFindUnknownFieldInTable[FROM=students.csv](4)" classname="ru.mai.lessons.rpks.impl.DatabaseDriverTest" time="0.002"/>
+  <testcase name="testNegativeTryFindUnknownFieldInTable[SELECT= FROM=groups.csv GROUPBY=group_name](5)" classname="ru.mai.lessons.rpks.impl.DatabaseDriverTest" time="0.001"/>
+  <testcase name="testNegativeTryFindUnknownFieldInTable[SELECT=group_name FROM= GROUPBY=group_name](6)" classname="ru.mai.lessons.rpks.impl.DatabaseDriverTest" time="0.001"/>
+  <testcase name="testNegativeTryFindUnknownFieldInTable[SELECT=group_name FROM=groups.csv GROUPBY=](7)" classname="ru.mai.lessons.rpks.impl.DatabaseDriverTest" time="0.001"/>
+  <testcase name="testNegativeTryFindUnknownFieldInTable[SELECT=group_name FROM=groups.csv GROUPBY group_name](8)" classname="ru.mai.lessons.rpks.impl.DatabaseDriverTest" time="0.001"/>
+  <testcase name="testNegativeTryFindUnknownFieldInTable[SELECT=full_name,subject_name FROM=students.csv,subjects.csv grade.csv WHERE=(grade=&apos;5&apos;)](9)" classname="ru.mai.lessons.rpks.impl.DatabaseDriverTest" time="0.004"/>
+  <testcase name="testNegativeTryFindUnknownFieldInTable[SELECT=full_name,subject_name FROM=students.csv,subjects.csv,grade.csv WHERE (grade=&apos;5&apos;)](10)" classname="ru.mai.lessons.rpks.impl.DatabaseDriverTest" time="0.003"/>
+  <testcase name="testNegativeTryFindUnknownFieldInTable[SELECT=full_name,subject_name FROM=students.csv,subjects.csv,grade.csv WHERE=grade=&apos;5&apos;](11)" classname="ru.mai.lessons.rpks.impl.DatabaseDriverTest" time="0.002"/>
+  <testcase name="testNegativeTryFindUnknownFieldInTable[SELECT=full_name,subject_name FROM=students.csv,subjects.csv,grade.csv WHERE=(grade==&apos;5&apos;)](12)" classname="ru.mai.lessons.rpks.impl.DatabaseDriverTest" time="0.001"/>
+  <testcase name="testPositiveFindDataBySelectFromWhere[SELECT=group_name,grade,date FROM=students.csv,groups.csv,subjects.csv,grade.csv WHERE=(full_name=&apos;Иванов Иван&apos; AND subject_name=&apos;Английский&apos;), [5ИНТ-001;5;17.01.2023]](1)" classname="ru.mai.lessons.rpks.impl.DatabaseDriverTest" time="0.014"/>
+  <testcase name="testPositiveFindDataBySelectFromWhere[SELECT=full_name,group_name,grade,date FROM=students.csv,groups.csv,subjects.csv,grade.csv WHERE=(subject_name=&apos;РПКС&apos;), [Иванов Иван;5ИНТ-001;5;05.01.2023, Петров Олег;5ИНТ-001;4;05.01.2023, Игнатова Ольга;5ИНТ-002;4;06.01.2023, Сидоров Николай;5ПМИ-001;5;07.01.2023, Калинина Дарья;5ПМИ-001;3;07.01.2023, Кузнецов Михаил;5ИНТ-001;5;05.01.2023, Орлов Виктор;5ПМИ-001;4;07.01.2023, Никитина Ирина;5ИНТ-002;3;06.01.2023]](2)" classname="ru.mai.lessons.rpks.impl.DatabaseDriverTest" time="0.006"/>
+  <testcase name="testPositiveFindDataBySelectFromWhere[SELECT=full_name,subject_name FROM=students.csv,subjects.csv,grade.csv WHERE=(grade=&apos;3&apos; OR grade=&apos;4&apos; OR grade=&apos;2&apos;), [Иванов Иван;Матан, Петров Олег;РПКС, Петров Олег;Матан, Петров Олег;История, Игнатова Ольга;РПКС, Калинина Дарья;РПКС, Калинина Дарья;Матан, Калинина Дарья;История, Калинина Дарья;Английский, Кузнецов Михаил;Матан, Кузнецов Михаил;История, Кузнецов Михаил;Английский, Орлов Виктор;РПКС, Орлов Виктор;Матан, Орлов Виктор;История, Орлов Виктор;Английский, Никитина Ирина;РПКС, Никитина Ирина;Матан, Никитина Ирина;Английский]](3)" classname="ru.mai.lessons.rpks.impl.DatabaseDriverTest" time="0.005"/>
+  <testcase name="testPositiveFindDataBySelectFromWhere[SELECT=group_name,full_name,subject_name FROM=students.csv,groups.csv,subjects.csv,grade.csv WHERE=(grade=&apos;2&apos;), [5ИНТ-002;Никитина Ирина;Английский]](4)" classname="ru.mai.lessons.rpks.impl.DatabaseDriverTest" time="0.003"/>
+  <testcase name="testPositiveFindDataBySelectFromWhere[SELECT=full_name,subject_name FROM=students.csv,subjects.csv,grade.csv WHERE=(grade=&apos;1&apos;), []](5)" classname="ru.mai.lessons.rpks.impl.DatabaseDriverTest" time="0.006"/>
+  <testcase name="testPositiveFindDataBySelectFromWhereGroupBy[SELECT=group_name FROM=groups.csv GROUPBY=group_name, [5ИНТ-001, 5ИНТ-002, 5ПМИ-001]](1)" classname="ru.mai.lessons.rpks.impl.DatabaseDriverTest" time="0.003"/>
+  <testcase name="testPositiveFindDataBySelectFromWhereGroupBy[SELECT=subject_name FROM=subjects.csv,grade.csv WHERE=(grade=&apos;5&apos;) GROUPBY=subject_name, [РПКС, История, Английский, Матан]](2)" classname="ru.mai.lessons.rpks.impl.DatabaseDriverTest" time="0.003"/>
+  <testcase name="testPositiveFindDataBySimpleSelectFrom[SELECT=full_name FROM=students.csv, [Иванов Иван, Петров Олег, Игнатова Ольга, Сидоров Николай, Калинина Дарья, Кузнецов Михаил, Орлов Виктор, Никитина Ирина]](1)" classname="ru.mai.lessons.rpks.impl.DatabaseDriverTest" time="0.003"/>
+  <testcase name="testPositiveFindDataBySimpleSelectFrom[SELECT=id,full_name FROM=students.csv, [0;Иванов Иван, 1;Петров Олег, 2;Игнатова Ольга, 3;Сидоров Николай, 4;Калинина Дарья, 5;Кузнецов Михаил, 6;Орлов Виктор, 7;Никитина Ирина]](2)" classname="ru.mai.lessons.rpks.impl.DatabaseDriverTest" time="0.003"/>
+  <testcase name="testPositiveFindDataBySimpleSelectFrom[SELECT=full_name,id FROM=students.csv, [Иванов Иван;0, Петров Олег;1, Игнатова Ольга;2, Сидоров Николай;3, Калинина Дарья;4, Кузнецов Михаил;5, Орлов Виктор;6, Никитина Ирина;7]](3)" classname="ru.mai.lessons.rpks.impl.DatabaseDriverTest" time="0.002"/>
+  <testcase name="testPositiveFindDataBySimpleSelectFrom[SELECT=subject_name FROM=subjects.csv, [РПКС, Матан, История, Английский]](4)" classname="ru.mai.lessons.rpks.impl.DatabaseDriverTest" time="0.002"/>
+  <testcase name="testPositiveFindDataBySimpleSelectFrom[SELECT=group_name,student_id FROM=groups.csv, [5ИНТ-001;5, 5ИНТ-002;2, 5ПМИ-001;4, 5ИНТ-001;0, 5ИНТ-001;1, 5ИНТ-002;7, 5ПМИ-001;3, 5ПМИ-001;6]](5)" classname="ru.mai.lessons.rpks.impl.DatabaseDriverTest" time="0.002"/>
+</testsuite>
